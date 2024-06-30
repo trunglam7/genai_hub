@@ -94,7 +94,7 @@ export default function ChatRealmInterface() {
 
     return (
         <div className={style.chatrealm_container}>
-            <h1>TextQuest RPG</h1>
+            <h1 style={{textAlign: 'center'}}>TextQuest RPG</h1>
             {loading && <CircularProgress />}
             {error && <p>{error}</p>}
             {currScenario && 

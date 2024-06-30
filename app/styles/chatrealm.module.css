@@ -16,4 +16,12 @@
 .choice_container{
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (width <= 675px) {
+    .chatrealm_container{
+        max-width: 100%;
+    }
 }
