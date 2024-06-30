@@ -1,0 +1,5 @@
+.main{
+    min-height: calc(100dvh - 90px);
+    display: flex;
+    justify-content: center;
+}

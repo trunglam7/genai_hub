@@ -1,0 +1,19 @@
+.chatrealm_container{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100dvh - 90px);
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.chat_scenario{
+    text-align: center;
+}
+
+.choice_container{
+    display: flex;
+    gap: 1rem;
+}
