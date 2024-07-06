@@ -41,10 +41,17 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.application_card}>
+            <Image
+                src="/images/imageinteract_img.png"
+                width={320}
+                height={320}
+                quality={100}
+                alt="Image Interact Screenshot"
+              />
             <div className={styles.app_desc}>
-              <Link href="/captioncraft">CaptionCraft</Link>
+              <Link href="/image_interact">Image Interact</Link>
               <p>
-              CaptionCraft is a versatile application designed to help you create the perfect caption for your images. Powered by advanced large language models (LLM), our app generates multiple caption options and allows you to customize them to your liking through interactive chat functionality.
+              Image Interact is a versatile application designed to help you engage with your images in innovative ways. Users can upload an image and interact with it through our interactive chat functionality. Powered by advanced large language models (LLM), our app allows you to ask questions or get information about the uploaded images.
               </p>
             </div>
           </div>

@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import styles from "./page.module.css";
 import ChatInterface from "../components/ChatInterface";
 import { ThemeProvider, createTheme } from "@mui/material";
+import CaptionCraft from "../components/CaptionCraft";
 
 
 const theme = createTheme({
@@ -19,7 +20,7 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <Header />
       <main className={styles.main}>
-        CaptionCraft - In Development
+        <CaptionCraft />
       </main>
     </ThemeProvider>
   );

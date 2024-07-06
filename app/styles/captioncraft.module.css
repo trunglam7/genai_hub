@@ -1,0 +1,73 @@
+.captioncraft_container{
+    min-height: calc(100dvh - 90px);
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1rem; 
+}
+
+.caption_chat_container{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.upload_container{
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.image_preview{
+    text-align: center;
+}
+
+.options_container{
+    display: flex;
+    gap: 1rem; 
+}
+
+.chat_container{
+    padding: 1rem;
+}
+
+.query_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.ai_message, .human_message{
+    border-radius: 1rem;
+    max-width: 70%;
+    padding: 1rem;
+}
+
+.ai_message{
+    background-color: rgb(255, 160, 160);
+}
+
+.human_message{
+    background-color: rgb(255, 107, 107);
+    align-self: flex-end;
+}
+
+.chat_container{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
