@@ -12,7 +12,7 @@ throw new Error("API key is missing or inactive.")
 
 const genAI = new GoogleGenerativeAI(googleGenAIAPIKey);
 const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.0-flash",
     systemInstruction: "You are a game master for an interactive text-based RPG. Your role is to create engaging and immersive scenarios for the player. Each scenario should end with a set of clear choices for the player to select from, typically between 2 to 4 options. Always ensure that the choices are relevant to the scenario and advance the story in interesting and unexpected ways. Respond in a structured JSON format with 'scenario', 'choices', and 'end' fields. 'scenario' must be a string, 'choices' must be an array of strings, and 'end' must be a boolean. Story ends when 'end' is true."
   });
 
@@ -31,6 +31,7 @@ export default function ChatRealmInterface() {
             const result = await model.generateContent(prompt);
             const response = result.response;
             const text = response.text();
+            console.log(text)
             const cleanedText = text.replace(/```/g, "").replace('json', "");
             setCurrScenario(JSON.parse(cleanedText));
             setChatHistory(

@@ -14,7 +14,7 @@ if (!googleGenAIAPIKey) {
 }
 
 const genAI = new GoogleGenerativeAI(googleGenAIAPIKey);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 export default function CaptionCraft() {
     const [buffer, setBuffer] = useState<Buffer | null>(null);

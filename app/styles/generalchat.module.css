@@ -1,0 +1,25 @@
+.chat_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content_container, .input_container{
+    width: 50%;
+}
+
+.content_container{
+    height: calc(70dvh);
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.input_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}

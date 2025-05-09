@@ -14,7 +14,7 @@ throw new Error("API key is missing or inactive.")
 }
 
 const genAI = new GoogleGenerativeAI(googleGenAIAPIKey);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash"});
 
 export default function ChatInterface() {
 
@@ -112,10 +112,10 @@ export default function ChatInterface() {
             maxOutputTokens: 2048,
           },
         });
-  
+
         const result = await chat.sendMessageStream(query);
-  
-        let modelResponse = ''; 
+
+        let modelResponse = '';
         const updatedChatHistory: Content[] = [...chatHistory, {
             role: "user",
             parts: [{ text: query }],
@@ -123,13 +123,13 @@ export default function ChatInterface() {
             role: "model",
             parts: [{ text: "" }]
         }];
-  
+
         for await (const chunk of result.stream) {
           const chunkText = chunk.text();
           modelResponse += chunkText;
-              
+
           updatedChatHistory[updatedChatHistory.length - 1].parts[0].text = modelResponse;
-          
+
           setChatHistory([...updatedChatHistory]);
         }
       } catch (err) {
@@ -145,7 +145,7 @@ export default function ChatInterface() {
         chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
       }
     }, [chatHistory]);
-        
+
     return (
         <div className={styles.chatinterface_container}>
             <div className={styles.app_header}>

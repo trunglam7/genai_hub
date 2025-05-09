@@ -1,5 +1,6 @@
 import { CSVLoader } from "@langchain/community/document_loaders/fs/csv";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+import { JSONLoader } from "langchain/document_loaders/fs/json";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
@@ -20,6 +21,9 @@ export async function POST(request: NextRequest) {
         docs = await loader.load();
     } else if (file.type === 'application/pdf') {
         const loader = new PDFLoader(file);
+        docs = await loader.load();
+    } else if (file.type === 'application/json') {
+        const loader = new JSONLoader(file);
         docs = await loader.load();
     } else {
         // Unsupported file type
